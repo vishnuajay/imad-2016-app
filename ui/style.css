@@ -32,4 +32,11 @@ body {
     color:green;
     font-weight:bold;
 }
-
+.h1
+{
+    align:center;
+    color:red;
+    text-decoration: underline;
+    letter-spacing: 3px;
+    font-family: "Times New Roman";
+}
