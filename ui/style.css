@@ -40,3 +40,18 @@ body {
     letter-spacing: 3px;
     font-family: "Times New Roman";
 }
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+ td {
+    text-align: left;
+    padding: 8px;
+    color:yellow;
+}
+
+tr:nth-child(even){background-color:white}
+
+
+
