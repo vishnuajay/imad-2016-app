@@ -34,7 +34,7 @@ body {
 }
 .h1
 {
-    align:center;
+   text-align:center;
     color:red;
     text-decoration: underline;
     letter-spacing: 3px;
