@@ -24,8 +24,8 @@ body {
 }
 .heading
 {
-    margin-left:100px;
+    margin-left:300px;
     color:green;
-    text-decoration:under-line;
+    font-weight:bold;
 }
 
