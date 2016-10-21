@@ -18,9 +18,10 @@ body {
     color:red;
 }
 
-.img-medium {
+.img {
     height: 200px;
     width:200px;
+    padding: 50px 30px 50px 80px;
 }
 .heading
 {
