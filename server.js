@@ -1,14 +1,15 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var Pool=require('Pg').Pool;
+var Pool=require('pg').Pool;
 var config={
-    user:'',
-    database:'',
-    host:'',
+    user:'vishnuajay',
+    database:'vishnuajay',
+    host:'db.imad.hasura-app.io',
     port:'5432',
     password:process.env.DB_PASSWORD
 };
+var pool=new Pool(config);
 var app = express();
 app.use(morgan('combined'));
 
@@ -27,6 +28,7 @@ app.get('/ui/style.css', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
+
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
