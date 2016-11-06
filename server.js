@@ -28,6 +28,22 @@ app.get('/ui/style.css', function (req, res) {
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
+function createTemplate(data){
+    var title=data.title;
+    var heading=data.heading;
+    var content=data.content;
+    var htmlTemplate=` <html>
+    <head>
+    <title>${title}</title>
+    </head>
+    <body>
+    <h1>${heading}</h1>
+    <p>${content}</p>
+    </body>
+    </html>`
+    ;
+  return htmlTemplate;  
+}
 
 
 
