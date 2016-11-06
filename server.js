@@ -44,7 +44,20 @@ function createTemplate(data){
     ;
   return htmlTemplate;  
 }
-
+app.get('/articles/:articleName',function(req,res){
+    pool.query("SELECT * FROM article where title=$1",[req.params.articleName],function(err,result){
+        if(err){
+        res.status(500).send(err,toString());    
+        }else{
+          if(result.rows.length==0){
+              res.status(404).send("article not found");
+          }  else{
+              var articleData=result.rows[0];
+              res.send(createTemplate(articleData));
+          }
+        }
+    });
+});
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
