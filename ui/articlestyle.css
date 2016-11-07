@@ -93,9 +93,12 @@ padding-top:10px;
 .div2
 {
 margin-top:70px;
+padding-left:15px;
+padding-right:15px;
 font-family:times new roman;
-height:800px;
+height:600px;
 width:100%;
+font-size:22;
 
 }
 .div3
@@ -105,7 +108,7 @@ margin-top:50px;
 height:450px;
 width:700px;
 background-color:#E4E6E1;
-padding-left:10px;
+padding-left:20px;
 }
 input[type=text], select {
     width:500px;
