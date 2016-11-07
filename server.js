@@ -39,7 +39,7 @@ function createTemplate(data){
     <link href="/ui/articlestyle.css" rel="stylesheet" />
     </head>
     <body>
-    <img class="img1" src="head.jpg">
+    <img class="img1" src="http://youngadventuress.com/wp-content/uploads/2013/04/youngadventuressbannerfinal1.jpg">
 <ul>
 <li><a href="#home">HOME</a></li>
   <li><a class="active" href="#Blog">BLOG</a></li>
