@@ -36,7 +36,7 @@ function createTemplate(data){
     var htmlTemplate=` <html>
     <head>
     <title>${title}</title>
-    <link href="/ui/articlestyle.css" rel="stylesheet" />
+    <link href="/ui/style.css" rel="stylesheet" />
     </head>
     <body>
     <img class="img1" src="head.jpg">
