@@ -36,7 +36,7 @@ function createTemplate(data){
     var htmlTemplate=` <html>
     <head>
     <title>${title}</title>
-    <link href="/ui/articlestyle.css" rel="stylesheet" />
+    <link href="/ui/style.css" rel="stylesheet" />
     </head>
     <body>
     <img class="img1" src="http://youngadventuress.com/wp-content/uploads/2013/04/youngadventuressbannerfinal1.jpg">
@@ -48,7 +48,7 @@ function createTemplate(data){
   <li><a href="#video">VIDEOS</a></li>
   <li><a href="#about">ABOUT ME</a></li>
 </ul>
-<div class="div1">${articleheading}</div>
+<div class="div10">${articleheading}</div>
 <div class="slideshow-container">${images}</div>
 <br>
 <div style="text-align:center">
@@ -56,8 +56,8 @@ function createTemplate(data){
   <span class="dot"></span>
   <span class="dot"></span>
 </div>
-<div class="div2">${content}</div>
-<div class="div3">
+<div class="div20">${content}</div>
+<div class="div30">
 <h1> Leave a Comment</h1>
 
 <textarea style="background-color: lightyellow" placeholder="Leave a Comment..." rows="7" cols="70">
