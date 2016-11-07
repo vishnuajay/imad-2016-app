@@ -46,7 +46,7 @@ function createTemplate(data){
   <li><a href="#destinations">DESTINATIONS</a></li>
   <li><a href="#photo">PHOTOGRAPHY</a></li>
   <li><a href="#video">VIDEOS</a></li>
-  <li><a href="#about">ABOUT ME</a></li>
+  <li><a href="http://vishnuajay.imad.hasura-app.io/aboutme">ABOUT ME</a></li>
 </ul>
 <div class="div10">${articleheading}</div>
 <div class="slideshow-container">${images}</div>
