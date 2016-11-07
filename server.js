@@ -30,15 +30,64 @@ app.get('/ui/madi.png', function (req, res) {
 });
 function createTemplate(data){
     var title=data.title;
-    var heading=data.heading;
+    var articleheading=data.articleheading;
+    var images=data.images;
     var content=data.content;
     var htmlTemplate=` <html>
     <head>
     <title>${title}</title>
+    <link href="/ui/articlestyle.css" rel="stylesheet" />
     </head>
     <body>
-    <h1>${heading}</h1>
-    <div>${content}</div>
+    <img class="img1" src="head.jpg">
+<ul>
+<li><a href="#home">HOME</a></li>
+  <li><a class="active" href="#Blog">BLOG</a></li>
+  <li><a href="#destinations">DESTINATIONS</a></li>
+  <li><a href="#photo">PHOTOGRAPHY</a></li>
+  <li><a href="#video">VIDEOS</a></li>
+  <li><a href="#about">ABOUT ME</a></li>
+</ul>
+<div class="div1">${articleheading}</div>
+<div class="slideshow-container">${images}</div>
+<br>
+<div style="text-align:center">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+<div class="div2">${content}</div>
+<div class="div3">
+<h1> Leave a Comment</h1>
+
+<textarea style="background-color: lightyellow" placeholder="Leave a Comment..." rows="7" cols="70">
+</textarea><p></p>
+<input type="text" style="background-color: lightyellow"placeholder="Name"><p></p>
+<input type="text" style="background-color: lightyellow"placeholder="Email"><p></p>
+<input type="submit" value="Post My Comment">
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000);
+}
+</script>
+    
     </body>
     </html>`
     ;
