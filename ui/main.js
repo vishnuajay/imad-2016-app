@@ -18,7 +18,7 @@ request.onreadystatechange=function(){
 };
 var nameInput=document.getElementById('comment_box');
 var name=nameInput.value;
-request.open('GET','http://vishnuajay.imad.hasura-app.io/submit-name?name='+names,true);
+request.open('GET','http://vishnuajay.imad.hasura-app.io/submit-name?name='+name,true);
 request.send(null);
 };
     
