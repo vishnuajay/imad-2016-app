@@ -7,7 +7,7 @@ body{
 background-color:#F1F1F1;
 }
 
-ul {
+ul.navigtn {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -315,6 +315,6 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #45a049;}
     
-    .a {list-style-position:inside;
+    ul.a {list-style-position:inside;
 list-style-type: none;}
     
