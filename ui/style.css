@@ -17,7 +17,7 @@ ul.navigtn {
     top: 150px;
     width: 100%;
 }
-li {
+li.nav {
     float: left;
 }
 
