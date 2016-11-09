@@ -66,6 +66,8 @@ function createTemplate(data){
   <span class="dot"></span>
 </div>
 <div class="div20">${content}</div>
+<ul class="a" id="comment_list">
+</ul>
 <div class="div30">
 <h1> Leave a Comment</h1>
 
