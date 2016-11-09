@@ -51,7 +51,7 @@ function createTemplate(data){
     <body>
     <img class="img1" src="http://youngadventuress.com/wp-content/uploads/2013/04/youngadventuressbannerfinal1.jpg">
 <ul class="navigtn">
-<li><a href="http://vishnuajay.imad.hasura-app.io/">HOME</a></li>
+<li class="nav"><a href="http://vishnuajay.imad.hasura-app.io/">HOME</a></li>
   <li class="nav"><a class="active" href="#Blog">BLOG</a></li>
   <li class="nav" ><a href="#destinations">DESTINATIONS</a></li>
   <li class="nav"><a href="#photo">PHOTOGRAPHY</a></li>
