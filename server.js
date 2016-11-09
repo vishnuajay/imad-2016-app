@@ -52,11 +52,11 @@ function createTemplate(data){
     <img class="img1" src="http://youngadventuress.com/wp-content/uploads/2013/04/youngadventuressbannerfinal1.jpg">
 <ul class="navigtn">
 <li><a href="http://vishnuajay.imad.hasura-app.io/">HOME</a></li>
-  <li><a class="active" href="#Blog">BLOG</a></li>
-  <li><a href="#destinations">DESTINATIONS</a></li>
-  <li><a href="#photo">PHOTOGRAPHY</a></li>
-  <li><a href="#video">VIDEOS</a></li>
-  <li><a href="http://vishnuajay.imad.hasura-app.io/aboutme">ABOUT ME</a></li>
+  <li class="nav"><a class="active" href="#Blog">BLOG</a></li>
+  <li class="nav" ><a href="#destinations">DESTINATIONS</a></li>
+  <li class="nav"><a href="#photo">PHOTOGRAPHY</a></li>
+  <li class="nav" ><a href="#video">VIDEOS</a></li>
+  <li class="nav"><a href="http://vishnuajay.imad.hasura-app.io/aboutme">ABOUT ME</a></li>
 </ul>
 <div class="div10">${articleheading}</div>
 <div class="slideshow-container">${images}</div>
