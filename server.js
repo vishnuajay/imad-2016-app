@@ -63,11 +63,11 @@ function createTemplate(data){
 <div class="div30">
 <h1> Leave a Comment</h1>
 
-<textarea style="background-color: lightyellow" placeholder="Leave a Comment..." rows="7" cols="70">
+<textarea style="background-color: lightyellow" id="comment_box" placeholder="Leave a Comment..." rows="7" cols="70">
 </textarea><p></p>
 <input type="text" style="background-color: lightyellow"placeholder="Name"><p></p>
 <input type="text" style="background-color: lightyellow"placeholder="Email"><p></p>
-<input type="submit" value="Post My Comment">
+<input type="submit" id="submit_btn" value="Post My Comment">
 </div>
 <script>
 var slideIndex = 0;
