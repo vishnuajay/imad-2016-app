@@ -315,3 +315,6 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #45a049;}
     
+    .a {list-style-position:inside;
+list-style-type: none;}
+    
