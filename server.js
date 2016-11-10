@@ -85,7 +85,18 @@ app.post('/login',function(req,res){
         } 
     });
 });
-app.get()
+app.get('/check-login',function(req,res){
+    if(req.session&& req.session.auth&& req.session.auth.userId){
+        res.send('you are logged in:'+req.session.auth.userId.toString());
+        
+    }else{
+        res.send('you are not logged in');
+    }
+});
+app.get('/logout',function(req,res){
+    delete req.session.auth;
+    res.send('logged out')l
+});
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
