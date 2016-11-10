@@ -19,7 +19,9 @@ app.get('/', function (req, res) {
 app.get('/aboutme', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'profile.html'));
 });
-
+app.get('/registration', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'reg.html'));
+});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
