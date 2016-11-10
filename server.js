@@ -43,6 +43,10 @@ app.get('/submit-name',function(req,res){
     names.push(name);
     res.send(JSON.stringify(names));
 });
+function hash(input,salt){
+    var hashed=crypto.pbkdf2Sync(input,salt,10000,512,'sha512');
+    return["pbkdf2","10000",salt,hashed.toString('hex')].join('$');
+}
 app.post('/createuser',function(req,res){
     var username=req.body.username;
     var password=req.body.password;
@@ -58,9 +62,30 @@ app.post('/createuser',function(req,res){
     });
 });
 app.post('/login',function(req,res){
-    var username
-})
-
+    var username=req.body.username;
+    var password=req.body.password;
+    pool.query('SELECT * FROM "user" WHERE username=$1',[username],function(err,result){
+       if(err){
+            res.status(500).send(err.toString());
+        }else{
+            if(result.rows.length===0){
+              res.status(403).send("username/password is invalid");
+            }else{
+                var dbString=result.rows[0].password;
+                var salt=dbString.split('$')[2];
+                var hashedPassword=hash(password,salt);
+                if(harshedPassword===dbString){
+                    req.session.auth={userId:result.rows[0].id};
+                    res.send('credentials correct');
+                }else{
+                    res.send(403).send('username/password invalid');
+                }
+            }
+            
+        } 
+    });
+});
+app.get()
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
