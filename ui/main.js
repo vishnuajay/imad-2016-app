@@ -22,4 +22,29 @@ var name=nameInput.value;
 request.open('GET','http://vishnuajay.imad.hasura-app.io/submit-name?name='+name,true);
 request.send(null);
 };
+ 
+    var login = document.getElementById('login_btn');
+    login.onclick = function () {
+        var request = new XMLHttpRequest();
     
+        request.onreadystatechange = function () {
+          if (request.readyState === XMLHttpRequest.DONE) {
+            
+              if (request.status === 200) {
+                  alert("login sucessfully");
+              } else if (request.status === 403) {
+                  login.value = 'Invalid credentials. Try again?';
+              } else if (request.status === 500) {
+                  alert('Something went wrong on the server');
+                  login.value = 'Login';
+              } else {
+                  alert('Something went wrong on the server');
+                  login.value = 'Login';
+              }
+    }
+};
+var username = document.getElementById('uname').value;
+        var password = document.getElementById('pass').value;
+        console.log(username);
+        console.log(password);
+        request.open('POST', '/login', true);
