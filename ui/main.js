@@ -64,8 +64,8 @@ var username = document.getElementById('uname').value;
               }
           }
         };
-        var username = document.getElementById('runame').value;
-        var password = document.getElementById('rpass').value;
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
         console.log(username);
         console.log(password);
         request.open('POST', '/create-user', true);
