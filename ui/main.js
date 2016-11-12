@@ -1,6 +1,22 @@
 console.log('Loaded!');
 
- 
+ function loadLoginForm (){
+var loginHtml =     `
+        <div class="div4">Login</div>
+<p></p>
+<form>
+  <input type="text" id="uname" name="uname" placeholder="username"><p></p>
+<input type="password" id="pass" name="pass" placeholder="password">
+</form>
+<p></p>
+<button class="button4 button5" id="login_btn">Login</button>
+<p></p>
+<div class="div5">
+<a href="http://vishnuajay.imad.hasura-app.io/registration">create an account</a><p></p>
+<a href="#">forgot password?</a>
+</div>
+        `;
+    document.getElementById('div2').innerHTML = loginHtml;
     var login = document.getElementById('login_btn');
     login.onclick =function () {
         var request = new XMLHttpRequest();
@@ -58,6 +74,7 @@ var username = document.getElementById('uname').value;
         register.value = 'Registering...';
     
     };
+ }
 
 function loadLoggedInUser (username) {
     var loginArea = document.getElementById('div2');
