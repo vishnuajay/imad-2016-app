@@ -2,10 +2,10 @@ console.log('Loaded!');
 
  
     var login = document.getElementById('login_btn');
-    login.onclick = function () {
+    login.onclick =function () {
         var request = new XMLHttpRequest();
     
-        request.onreadystatechange = function () {
+        request.onreadystatechange =function () {
           if (request.readyState === XMLHttpRequest.DONE) {
             
               if (request.status === 200) {
@@ -33,10 +33,10 @@ var username = document.getElementById('uname').value;
     };
     
      var register = document.getElementById('reg_btn');
-    register.onclick = function () {
+    register.onclick =function () {
         var request = new XMLHttpRequest();
         
-        request.onreadystatechange = function () {
+        request.onreadystatechange =function () {
           if (request.readyState === XMLHttpRequest.DONE) {
               // Take some action
               if (request.status === 200) {
