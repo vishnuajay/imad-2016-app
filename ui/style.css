@@ -300,15 +300,7 @@ width:600px;
 background-color:#E4E6E1;
 padding-left:20px
 }
-input[type=text], select {
-    width:500px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
+
 input[type=submit] {
     width:400px;
     background-color: #4CAF50;
@@ -325,15 +317,4 @@ input[type=submit]:hover {
     
 
     
-  table {
-    border-collapse: collapse;
-    width: 100%;
-}
-th, td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-    padding-left:30px;
-}
-
-tr:hover{background-color:#f5f5f5}  
+ 
