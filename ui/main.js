@@ -2,7 +2,7 @@ console.log('Loaded!');
 
  function loadLoginForm (){
 var loginHtml =     `
-        <div class="div4">Login</div>
+        <div class="div4">Login/Register</div>
 <p></p>
 <form>
   <input type="text" id="username" name="username" placeholder="username"><p></p>
@@ -12,7 +12,7 @@ var loginHtml =     `
 <button class="button4 button5" id="login_btn">Login</button>
 <p></p>
 <p></p>
-<button class="button4 button5" id="regr_btn">Login</button>
+<button class="button4 button5" id="regr_btn">Register</button>
 <div class="div5">
 <a href="http://vishnuajay.imad.hasura-app.io/registration">create an account</a><p></p>
 <a href="#">forgot password?</a>
