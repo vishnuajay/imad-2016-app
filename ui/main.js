@@ -5,7 +5,7 @@ var loginHtml =     `
         <div class="div4">Login/Register</div>
 <p></p>
 <form>
-  <input type="text" id="username" name="username" placeholder="username"><p></p>
+  <input type="text" id="username" name="username" placeholder="username">
 <input type="password" id="password" name="password" placeholder="password">
 </form>
 <p></p>
