@@ -76,16 +76,12 @@ function createTemplate(data){
   <span class="dot"></span>
 </div>
 <div class="div20">${content}</div>
-<table id="comment_list">
-</table>
-<div class="div30">
-<h1> Leave a Comment</h1>
-
-<textarea style="background-color: lightyellow" id="comment_box" placeholder="Leave a Comment..." rows="7" cols="70">
-</textarea><p></p>
-<input type="text" id="name" style="background-color: lightyellow"placeholder="Name"><p></p>
-<input type="text" style="background-color: lightyellow"placeholder="Email"><p></p>
-<input type="submit" id="submit_btn" value="Post My Comment">
+<p></p>
+<div id="comment_form">
+</div>
+<p></p>
+<h1>Comments</h1>
+<div id="comments">
 </div>
 <script>
 var slideIndex = 0;
