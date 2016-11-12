@@ -5,12 +5,14 @@ var loginHtml =     `
         <div class="div4">Login</div>
 <p></p>
 <form>
-  <input type="text" id="uname" name="uname" placeholder="username"><p></p>
-<input type="password" id="pass" name="pass" placeholder="password">
+  <input type="text" id="username" name="username" placeholder="username"><p></p>
+<input type="password" id="password" name="password" placeholder="password">
 </form>
 <p></p>
 <button class="button4 button5" id="login_btn">Login</button>
 <p></p>
+<p></p>
+<button class="button4 button5" id="regr_btn">Login</button>
 <div class="div5">
 <a href="http://vishnuajay.imad.hasura-app.io/registration">create an account</a><p></p>
 <a href="#">forgot password?</a>
@@ -38,8 +40,8 @@ var loginHtml =     `
               loadLogin();
     }
 };
-var username = document.getElementById('uname').value;
-        var password = document.getElementById('pass').value;
+var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
         console.log(username);
         console.log(password);
         request.open('POST', 'http://vishnuajay.imad.hasura-app.io/login', true);
@@ -48,7 +50,7 @@ var username = document.getElementById('uname').value;
         
     };
     
-     var register = document.getElementById('reg_btn');
+     var register = document.getElementById('regr_btn');
     register.onclick =function () {
         var request = new XMLHttpRequest();
         
