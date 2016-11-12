@@ -104,7 +104,7 @@ function showSlides() {
     setTimeout(showSlides, 2000);
 }
 </script>
-<script type="text/javascript" src="/ui/article.js">
+<script type="text/javascript" src="/ui/main.js">
 </script>
 
     </body>
