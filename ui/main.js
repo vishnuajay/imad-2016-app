@@ -14,7 +14,6 @@ var loginHtml =     `
 <p></p>
 <button class="button4 button5" id="regr_btn">Register</button><p></p>
 <div class="div5">
-<
 <a href="#">forgot password?</a>
 </div>
         `;
