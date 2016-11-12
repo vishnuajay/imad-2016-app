@@ -12,9 +12,9 @@ var loginHtml =     `
 <button class="button4 button5" id="login_btn">Login</button>
 <p></p>
 <p></p>
-<button class="button4 button5" id="regr_btn">Register</button>
+<button class="button4 button5" id="regr_btn">Register</button><p></p>
 <div class="div5">
-<a href="http://vishnuajay.imad.hasura-app.io/registration">create an account</a><p></p>
+<
 <a href="#">forgot password?</a>
 </div>
         `;
