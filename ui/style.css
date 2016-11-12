@@ -294,10 +294,10 @@ font-size:22;
 {
 padding-top:10px;
 margin-top:50px;
-height:450px;
-width:700px;
+height:350px;
+width:600px;
 background-color:#E4E6E1;
-padding-left:20px;
+padding-left:20px
 }
 input[type=text], select {
     width:500px;
