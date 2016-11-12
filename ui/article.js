@@ -2,16 +2,17 @@ var currentArticleTitle = window.location.pathname.split('/')[2];
 
 function loadCommentForm () {
     var commentFormHtml = `
-        <h5>Submit a comment</h5>
-        <textarea id="comment_text" rows="5" cols="100" placeholder="Enter your comment here..."></textarea>
-        <br/>
-        <input type="submit" id="submit" value="Submit" />
-        <br/>
+        <div class="div30">
+<h1> Leave a Comment</h1>
+<textarea style="background-color: lightyellow" id="comment_text" placeholder="Leave a Comment..." rows="7" cols="70">
+</textarea><p></p>
+<input type="submit" id="submit_btn" value="Post My Comment">
+</div>
         `;
     document.getElementById('comment_form').innerHTML = commentFormHtml;
     
     // Submit username/password to login
-    var submit = document.getElementById('submit');
+    var submit = document.getElementById('submit_btn');
     submit.onclick = function () {
         // Create a request object
         var request = new XMLHttpRequest();
