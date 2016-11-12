@@ -41,6 +41,7 @@ request.send(null);
                   alert('Something went wrong on the server');
                   login.value = 'Login';
               }
+              loadLogin();
     }
 };
 var username = document.getElementById('uname').value;
@@ -80,3 +81,29 @@ var username = document.getElementById('uname').value;
     
     };
 
+function loadLoggedInUser (username) {
+    var loginArea = document.getElementById('div2');
+    loginArea.innerHTML = `
+    <div class="div17">
+        <h3> Hi <i>${username}</i></h3>
+        <a href="/logout">Logout</a>
+        </div>
+    `;
+}
+
+function loadLogin () {
+
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if (request.readyState === XMLHttpRequest.DONE) {
+            if (request.status === 200) {
+                loadLoggedInUser(this.responseText);
+            } else {
+                alert("please login");
+            }
+        }
+    };
+    
+    request.open('GET', '/check-login', true);
+    request.send(null);
+}
