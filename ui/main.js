@@ -85,6 +85,7 @@ function loadLoggedInUser (username) {
         <h3> Hi <i>${username}</i></h3><p></p>
         <h4>you are logged in sucessfully.....</h4>
         <br/><br/>
+        <img src="https://s-media-cache-ak0.pinimg.com/564x/4e/5c/f7/4e5cf7d4ccb9c59b6620a9c71944d51e.jpg" width="350px" height="270px">
         <a href="/logout">Logout</a>
         </div>
     `;
