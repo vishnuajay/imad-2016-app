@@ -76,9 +76,8 @@ var username = document.getElementById('username').value;
               if (request.status === 200) {
                   if(document.getElementById('username').value!==""&&document.getElementById('password').value!==""){
                   alert('User created successfully');
-                  register.value = 'Registered!';
-                      }else{
-                          alert("choose username and password");
+                  document.getElementById('username').value!=="";
+                  document.getElementById('password').value!==""
                       }
                   
               } else {
