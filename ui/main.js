@@ -78,7 +78,7 @@ var username = document.getElementById('username').value;
                   alert('User created successfully');
                   register.value = 'Registered!';
                       }else{
-                          alert("");
+                          alert("choose username and password");
                       }
                   
               } else {
