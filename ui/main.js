@@ -77,7 +77,7 @@ var username = document.getElementById('username').value;
                   if(document.getElementById('username').value!==""&&document.getElementById('password').value!==""){
                   alert('User created successfully');
                   document.getElementById('username').value!=="";
-                  document.getElementById('password').value!==""
+                  document.getElementById('password').value!=="";
                       }
                   
               } else {
