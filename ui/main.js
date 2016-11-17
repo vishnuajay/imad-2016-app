@@ -46,7 +46,7 @@ var loginHtml =     `
                   alert("login sucessfully");
               } else if (request.status === 403) {
                   alert("enter valid username/password");
-                  login.value = 'Invalid credentials. Try again?';
+                  login_btn.value = 'Invalid credentials. Try again?';
               } else if (request.status === 500) {
                   alert('Something went wrong on the server');
                   login.value = 'Login';
