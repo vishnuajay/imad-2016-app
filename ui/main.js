@@ -45,6 +45,7 @@ var loginHtml =     `
               if (request.status === 200) {
                   alert("login sucessfully");
               } else if (request.status === 403) {
+                  alert("enter valid username/password");
                   login.value = 'Invalid credentials. Try again?';
               } else if (request.status === 500) {
                   alert('Something went wrong on the server');
@@ -72,7 +73,6 @@ var username = document.getElementById('username').value;
         
         request.onreadystatechange =function () {
           if (request.readyState === XMLHttpRequest.DONE) {
-              // Take some action
               if (request.status === 200) {
                   alert('User created successfully');
                   register.value = 'Registered!';
