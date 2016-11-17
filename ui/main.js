@@ -74,8 +74,10 @@ var username = document.getElementById('username').value;
         request.onreadystatechange =function () {
           if (request.readyState === XMLHttpRequest.DONE) {
               if (request.status === 200) {
+                  if(document.getElementById('username').value!==0&&document.getElementById('password').value!==0){
                   alert('User created successfully');
-                  register.value = 'Registered!';
+                  register.value = 'Registered!';}
+                  else{alert("enter username and password");}
               } else {
                   alert('Could not register the user');
                   register.value = 'Register';
