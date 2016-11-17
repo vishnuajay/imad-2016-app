@@ -76,7 +76,10 @@ var username = document.getElementById('username').value;
               if (request.status === 200) {
                   if(document.getElementById('username').value!==""&&document.getElementById('password').value!==""){
                   alert('User created successfully');
-                  register.value = 'Registered!';}
+                  register.value = 'Registered!';
+                      }else{
+                          alert("");
+                      }
                   
               } else {
                   alert('Could not register the user');
