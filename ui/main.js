@@ -134,8 +134,7 @@ function loadCommentForm () {
 <textarea style="background-color: lightyellow" id="comment_text" placeholder="Leave a Comment..." rows="7" cols="70">
 </textarea><p></p>
 <input type="submit" id="submit_btn" value="Post My Comment">
-</div>
-        `;
+</div>`;
     document.getElementById('comment_form').innerHTML = commentFormHtml;
     
     // Submit username/password to login
@@ -168,7 +167,20 @@ function loadCommentForm () {
         
     };
 }
-
+function loadLogin () {
+    // Check if the user is already logged in
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if (request.readyState === XMLHttpRequest.DONE) {
+            if (request.status === 200) {
+                loadCommentForm(this.responseText);
+            }
+        }
+    };
+    
+    request.open('GET', '/check-login', true);
+    request.send(null);
+}
 function escapeHTML (text)
 {
     var $text = document.createTextNode(text);
