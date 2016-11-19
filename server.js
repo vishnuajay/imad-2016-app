@@ -105,7 +105,7 @@ function showSlides() {
     setTimeout(showSlides, 2000);
 }
 </script>
-<script type="text/javascript" src="/ui/main.js">
+<script type="text/javascript" src="/ui/article.js">
 </script>
 
     </body>
@@ -202,8 +202,6 @@ app.get('/logout', function (req, res) {
 
 
 app.get('/get-comments/:articleName', function (req, res) {
-   // make a select request
-   // return a response with the results
    pool.query('SELECT comment.*, "user".username FROM article, comment, "user" WHERE article.title = $1 AND article.id = comment.article_id AND comment.user_id = "user".id ORDER BY comment.timestamp DESC', [req.params.articleName], function (err, result) {
       if (err) {
           res.status(500).send(err.toString());
@@ -214,9 +212,7 @@ app.get('/get-comments/:articleName', function (req, res) {
 });
 
 app.post('/submit-comment/:articleName', function (req, res) {
-   // Check if the user is logged in
     if (req.session && req.session.auth && req.session.auth.userId) {
-        // First check if the article exists and get the article-id
         pool.query('SELECT * from article where title = $1', [req.params.articleName], function (err, result) {
             if (err) {
                 res.status(500).send(err.toString());
@@ -242,12 +238,6 @@ app.post('/submit-comment/:articleName', function (req, res) {
         res.status(403).send('Only logged in users can comment');
     }
 });
-
-
-
-
-
-
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
 app.listen(8080, function () {
